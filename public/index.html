@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Hai thí nghiệm Cloudflare Workers: Async waits và Distributed State.">
+  <title>NEON · Cloudflare Workers Seminar</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="page-header">
+    <div><p class="eyebrow">NEON / CLOUD COMPUTING SEMINAR</p>
+      <h1>Chờ đồng thời.<br>Giữ state bền vững.</h1>
+      <p class="intro">Hai thí nghiệm trực tiếp trên Cloudflare Workers.</p>
+    </div>
+    <div class="runtime"><span class="dot"></span><span id="health">Đang kết nối…</span>
+      <small id="origin"></small></div>
+  </header>
+  <main>
+    <form id="token-form" class="token-bar">
+      <label for="token">Token điều khiển</label>
+      <input id="token" type="password" autocomplete="off" spellcheck="false" placeholder="Nhập DEMO_TOKEN" required>
+      <button type="submit" data-action>Kết nối / Đọc trạng thái</button>
+      <span>Token chỉ giữ trong bộ nhớ trang.</span>
+    </form>
+    <p id="notice" class="notice" role="status" aria-live="polite">Nhập token để bắt đầu. Tải lại trang không tăng hoặc reset counter.</p>
+
+    <section class="demo" aria-labelledby="async-title">
+      <div class="section-heading"><span class="number">01</span><div>
+        <p class="eyebrow">EVENT LOOP & PROMISE.ALL</p><h2 id="async-title">Async waits</h2>
+      </div><span class="tag">3 tác vụ × 1.000 ms</span></div>
+      <p>Ba khoảng chờ I/O độc lập. Tuần tự chờ từng tác vụ; đồng thời tạo cả ba Promise trước khi <code>await Promise.all</code>.</p>
+      <div class="controls">
+        <button id="seq" data-action>Chạy tuần tự</button>
+        <button id="parallel" class="primary" data-action>Chạy đồng thời</button>
+        <button id="benchmark" data-action>Đo 5 lượt</button>
+        <button id="csv" class="quiet" disabled>Tải CSV</button>
+        <button id="clear" class="quiet" data-action>Xóa kết quả</button>
+      </div>
+      <div class="metrics">
+        <article><span>Median tuần tự</span><strong id="seq-median">—</strong><small id="seq-count">Chưa có mẫu</small></article>
+        <article><span>Median đồng thời</span><strong id="parallel-median">—</strong><small id="parallel-count">Chưa có mẫu</small></article>
+      </div>
+      <p id="async-progress" class="caption" aria-live="polite">Đồng hồ dừng sau khi đọc hết body. Đo 5 lượt gồm warm-up mỗi cách một lần, rồi 5 cặp đổi thứ tự.</p>
+      <div class="table-scroll"><table><thead><tr><th>Lượt</th><th>Cách chạy</th><th>HTTP</th><th>Tổng thời gian</th><th>Body / lỗi</th></tr></thead>
+        <tbody id="async-rows"><tr class="empty"><td colspan="5">Chưa có kết quả chạy.</td></tr></tbody></table></div>
+    </section>
+
+    <section class="demo" aria-labelledby="state-title">
+      <div class="section-heading"><span class="number">02</span><div>
+        <p class="eyebrow">SQLITE-BACKED DURABLE OBJECT</p><h2 id="state-title">Distributed State</h2>
+      </div><span class="tag">seminar-demo-2</span></div>
+      <p>Cùng một object, hai nơi lưu. <code>ctx.abort()</code> kết thúc instance; request đọc tiếp theo khởi tạo instance mới trên cùng storage.</p>
+      <div class="metrics counters">
+        <article><span>RAM</span><strong id="memory">—</strong><small>Thuộc tính JavaScript trong object</small></article>
+        <article><span>Durable storage</span><strong id="durable">—</strong><small>Mỗi lần đọc lấy trực tiếp từ SQLite</small></article>
+      </div>
+      <div class="controls">
+        <button id="read" data-action>Đọc lại</button>
+        <button id="increment" data-action>Tăng cả hai</button>
+        <button id="reset" class="quiet" data-action>Reset dữ liệu</button>
+        <button id="restart" data-action>Khởi động lại object</button>
+        <button id="scenario" class="primary" data-action>Chạy kịch bản</button>
+        <button id="json" class="quiet" disabled>Tải JSON</button>
+      </div>
+      <p class="caption">Kịch bản: 0/0 → 3/3 → restart → 0/3 → 1/4. Request restart có thể lỗi; kết luận dựa trên snapshot đọc lại. Tăng và restart không tự retry.</p>
+      <dl class="identities"><dt>Object ID</dt><dd id="object-id">—</dd>
+        <dt>Instance hiện tại</dt><dd id="instance-id">—</dd>
+        <dt>Instance trước restart</dt><dd id="previous-instance">—</dd></dl>
+      <div class="table-scroll"><table><thead><tr><th>Bước</th><th>RAM</th><th>SQLite</th><th>Kiểm chứng</th></tr></thead>
+        <tbody id="state-rows"><tr class="empty"><td colspan="4">Chưa đọc trạng thái.</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <footer>Cloudflare Workers Free · Một SQLite Durable Object · Chỉ hiển thị dữ liệu nhận từ API</footer>
+</body>
+</html>
