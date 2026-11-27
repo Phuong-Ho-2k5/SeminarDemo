@@ -1,0 +1,48 @@
+% Exactly two Beamer frames. Input inside the original document's document env.
+% Requires a Vietnamese-capable Beamer preamble (e.g. XeLaTeX + fontspec).
+% Standalone rendering is not verified: no original Beamer or TeX engine supplied.
+% Measurement source: results/cloud/async_summary.json (real HTTPS run).
+\begin{frame}{Demo 1: Async waits trên Cloudflare Workers}
+  \textbf{Thực hiện}
+  \begin{enumerate}
+    \item Mở trang demo HTTPS, nhập token điều khiển.
+    \item Chạy tuần tự, rồi chạy đồng thời với \texttt{Promise.all}.
+    \item Đo 5 lượt; xem median và tải CSV.
+  \end{enumerate}
+  \medskip
+  Ba khoảng chờ độc lập, mỗi khoảng 1 giây.
+  Tạo cả ba Promise trước khi chờ \texttt{Promise.all}.
+  \medskip
+
+  \textbf{Kết quả đo HTTPS thực tế} (5 mẫu hợp lệ mỗi cách):
+  \begin{center}
+    \begin{tabular}{lr}
+      Cách chạy & Median (ms) \\\hline
+      Tuần tự & 3234.248 \\
+      Đồng thời & 1208.937
+    \end{tabular}
+  \end{center}
+  Đồng hồ client dừng sau khi đọc hết body; warm-up không tính vào median.
+  \note{[Sources] Cloudflare Scheduler: https://developers.cloudflare.com/workers/runtime-apis/scheduler/ ; actual samples: \texttt{results/cloud/async\_samples.csv}, \texttt{results/cloud/async\_summary.json}.}
+\end{frame}
+
+\begin{frame}{Demo 2: RAM và Durable storage}
+  Một SQLite-backed Durable Object, tên \texttt{seminar-demo-2}.
+  \begin{center}
+    \begin{tabular}{lrr}
+      Thao tác & RAM & SQLite \\\hline
+      Reset dữ liệu & 0 & 0 \\
+      Tăng cả hai ba lần & 3 & 3 \\
+      Restart bằng \texttt{ctx.abort()} & 0 & 3 \\
+      Tăng tiếp một lần & 1 & 4
+    \end{tabular}
+  \end{center}
+  \textbf{Kiểm chứng sau restart:}
+  \begin{itemize}
+    \item \texttt{instance\_id} mới, \texttt{object\_id} giữ nguyên.
+    \item RAM về 0; giá trị đã ghi vào SQLite vẫn là 3.
+    \item Request restart có thể lỗi; đọc lại snapshot mới là bằng chứng.
+  \end{itemize}
+  Không tự retry thao tác tăng hoặc restart. Tải JSON để đối chiếu.
+  \note{[Sources] https://developers.cloudflare.com/durable-objects/api/state/\#abort ; https://developers.cloudflare.com/durable-objects/best-practices/access-durable-objects-storage/ ; actual cloud snapshots: \texttt{results/cloud/state\_run.json}.}
+\end{frame}
