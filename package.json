@@ -1,0 +1,26 @@
+{
+  "name": "neon-workers-seminar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Workers seminar: Async waits and Distributed State",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "setup:local": "python scripts/setup_local.py",
+    "dev": "wrangler dev --local --ip 127.0.0.1 --port 8787 --persist-to ./local-state",
+    "check": "wrangler deploy --dry-run --outdir dist",
+    "test": "node --test tests/*.test.js && python -m unittest discover -s tests -p test_*.py",
+    "test:api": "python scripts/check_api.py --local-token",
+    "test:ui": "node scripts/check_ui.mjs",
+    "measure": "python scripts/measure_async.py --local-token",
+    "state:verify": "python scripts/verify_cloud_state.py --local-token",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0",
+    "wrangler": "4.168.0"
+  }
+}

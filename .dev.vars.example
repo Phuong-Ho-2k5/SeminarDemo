@@ -1,0 +1,3 @@
+# Local only. Run npm run setup:local to generate .dev.vars without printing it.
+# Production: npx wrangler secret put DEMO_TOKEN (enter privately in terminal).
+DEMO_TOKEN="replace-with-a-long-random-demo-token"

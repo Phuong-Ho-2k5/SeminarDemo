@@ -1,0 +1,30 @@
+node_modules/
+.wrangler/
+local-state/
+dist/
+__pycache__/
+*.pyc
+.env*
+.dev.vars*
+!.dev.vars.example
+.demo-token
+*.log
+
+# Credentials, private keys and local authentication files
+.secrets/
+secrets/
+*.token
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+.npmrc
+.netrc
+_netrc
+credentials.json
+service-account*.json
+
+# Account inspection records contain Cloudflare account metadata
+/results/cloud/preflight*.json
+/results/cloud/unpublished.json
