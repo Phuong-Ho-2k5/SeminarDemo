@@ -1,0 +1,98 @@
+{
+  "base_url": "http://127.0.0.1:8787",
+  "recorded_at": "2026-11-27T06:46:24.113243+00:00",
+  "counter_name": "seminar-demo-2",
+  "passed": true,
+  "checks": {
+    "reset_zero_zero": true,
+    "increment_1": true,
+    "identity_stable_1": true,
+    "increment_2": true,
+    "identity_stable_2": true,
+    "increment_3": true,
+    "identity_stable_3": true,
+    "before_three_three": true,
+    "read_does_not_mutate": true,
+    "same_object_id": true,
+    "same_counter_name": true,
+    "new_instance": true,
+    "after_zero_three": true,
+    "after_one_four": true,
+    "final_identity_stable": true,
+    "final_get_unchanged": true
+  },
+  "increments": [
+    {
+      "memory_value": 1,
+      "durable_value": 1,
+      "instance_id": "7c95b587-0706-4740-b73c-3b5addab40b1",
+      "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 2,
+      "durable_value": 2,
+      "instance_id": "7c95b587-0706-4740-b73c-3b5addab40b1",
+      "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 3,
+      "durable_value": 3,
+      "instance_id": "7c95b587-0706-4740-b73c-3b5addab40b1",
+      "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+      "counter_name": "seminar-demo-2"
+    }
+  ],
+  "polls": [
+    {
+      "attempt": 1,
+      "snapshot": {
+        "memory_value": 0,
+        "durable_value": 3,
+        "instance_id": "d2cfeb1d-5ba2-4944-ba18-71f6cc1588ff",
+        "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+        "counter_name": "seminar-demo-2"
+      }
+    }
+  ],
+  "after_reset": {
+    "memory_value": 0,
+    "durable_value": 0,
+    "instance_id": "7c95b587-0706-4740-b73c-3b5addab40b1",
+    "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+    "counter_name": "seminar-demo-2"
+  },
+  "before_restart": {
+    "memory_value": 3,
+    "durable_value": 3,
+    "instance_id": "7c95b587-0706-4740-b73c-3b5addab40b1",
+    "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+    "counter_name": "seminar-demo-2"
+  },
+  "restart_request": {
+    "attempts": 1,
+    "error": "ValueError: POST /api/state/restart: HTTP 503, b'{\"error\":\"OBJECT_RESTART_PENDING\",\"message\":\"Request restart ended. Read state to verify object_id and instance_id.\"}'"
+  },
+  "after_restart": {
+    "memory_value": 0,
+    "durable_value": 3,
+    "instance_id": "d2cfeb1d-5ba2-4944-ba18-71f6cc1588ff",
+    "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+    "counter_name": "seminar-demo-2"
+  },
+  "after_increment": {
+    "memory_value": 1,
+    "durable_value": 4,
+    "instance_id": "d2cfeb1d-5ba2-4944-ba18-71f6cc1588ff",
+    "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+    "counter_name": "seminar-demo-2"
+  },
+  "final_read": {
+    "memory_value": 1,
+    "durable_value": 4,
+    "instance_id": "d2cfeb1d-5ba2-4944-ba18-71f6cc1588ff",
+    "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+    "counter_name": "seminar-demo-2"
+  }
+}

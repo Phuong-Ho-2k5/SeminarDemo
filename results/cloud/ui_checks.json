@@ -1,0 +1,108 @@
+{
+  "recorded_at": "2026-11-27T06:44:10.363Z",
+  "base_url": "https://neon-workers-seminar.neon-workers-seminar.workers.dev",
+  "mode": "JSDOM + real HTTP; no visual browser rendering",
+  "passed": true,
+  "checks": [
+    {
+      "name": "served index.html matches source",
+      "passed": true
+    },
+    {
+      "name": "served app.js matches source",
+      "passed": true
+    },
+    {
+      "name": "served demo-client.js matches source",
+      "passed": true
+    },
+    {
+      "name": "served style.css matches source",
+      "passed": true
+    },
+    {
+      "name": "only health GET on page load",
+      "passed": true
+    },
+    {
+      "name": "wrong token gives error and restores buttons",
+      "passed": true
+    },
+    {
+      "name": "valid token reads state",
+      "passed": true
+    },
+    {
+      "name": "single-run buttons show real completed responses",
+      "passed": true
+    },
+    {
+      "name": "benchmark shows warmups and ten measured samples",
+      "passed": true
+    },
+    {
+      "name": "both medians have five valid samples",
+      "passed": true
+    },
+    {
+      "name": "CSV has header + 10 samples, no secret",
+      "passed": true
+    },
+    {
+      "name": "clear resets visible timing results",
+      "passed": true
+    },
+    {
+      "name": "reset UI 0/0",
+      "passed": true
+    },
+    {
+      "name": "increment UI 3/3",
+      "passed": true
+    },
+    {
+      "name": "read button unchanged",
+      "passed": true
+    },
+    {
+      "name": "restart UI 0/3 with real identity comparison",
+      "passed": true
+    },
+    {
+      "name": "increment after restart UI 1/4",
+      "passed": true
+    },
+    {
+      "name": "full scenario UI PASS",
+      "passed": true
+    },
+    {
+      "name": "JSON has successful real snapshots and no secret",
+      "passed": true
+    },
+    {
+      "name": "failed POST is not retried and controls recover",
+      "passed": true
+    },
+    {
+      "name": "lost committed response gives error without retry",
+      "passed": true
+    },
+    {
+      "name": "read recovers actual committed 2/5 after lost response",
+      "passed": true
+    },
+    {
+      "name": "explicit fresh scenario restores expected 1/4",
+      "passed": true
+    },
+    {
+      "name": "refresh loses token and sends only a health GET",
+      "passed": true
+    },
+    {
+      "name": "refresh/reconnect preserves 1/4",
+      "passed": true
+    }
+  ]
+}

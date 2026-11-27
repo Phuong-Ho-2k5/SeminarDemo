@@ -1,0 +1,116 @@
+{
+  "recorded_at": "2026-11-27T06:50:45.727619+00:00",
+  "functional_checks_passed": true,
+  "all_plan_criteria_verified": false,
+  "checks": {
+    "local_five_alternating_pairs": true,
+    "local_warmups": true,
+    "local_median_recalculated": true,
+    "local_async_run": true,
+    "local_api_contracts": true,
+    "local_ui_dom_http": true,
+    "local_state_sequence": true,
+    "local_same_object_new_instance": true,
+    "local_restart_dispatched_once": true,
+    "cloud_five_alternating_pairs": true,
+    "cloud_warmups": true,
+    "cloud_median_recalculated": true,
+    "cloud_async_run": true,
+    "cloud_api_contracts": true,
+    "cloud_ui_dom_http": true,
+    "cloud_state_sequence": true,
+    "cloud_same_object_new_instance": true,
+    "cloud_restart_dispatched_once": true,
+    "missing_secret_real_local_runtime": true,
+    "unit_tests_passed": true,
+    "dry_run_build_passed": true,
+    "final_https_health": true,
+    "no_paid_workers_subscription": true,
+    "two_beamer_frames_supplied": true,
+    "deliverables_and_bundle_no_secret_leaks": true
+  },
+  "evidence": {
+    "local": {
+      "async_routes": {
+        "/api/async/seq": {
+          "valid_samples": 5,
+          "invalid_samples": 0,
+          "median_ms": 3027.237
+        },
+        "/api/async/parallel": {
+          "valid_samples": 5,
+          "invalid_samples": 0,
+          "median_ms": 1020.118
+        }
+      },
+      "median_speedup": 2.9675361085678325,
+      "api_checks": 57,
+      "ui_dom_checks": 25,
+      "state_before": {
+        "memory_value": 3,
+        "durable_value": 3,
+        "instance_id": "7c95b587-0706-4740-b73c-3b5addab40b1",
+        "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+        "counter_name": "seminar-demo-2"
+      },
+      "state_after": {
+        "memory_value": 0,
+        "durable_value": 3,
+        "instance_id": "d2cfeb1d-5ba2-4944-ba18-71f6cc1588ff",
+        "object_id": "af0d70c4a06494455719882d6ad0ec8726b5ebc6156146854a4853f65ed2d700",
+        "counter_name": "seminar-demo-2"
+      }
+    },
+    "cloud": {
+      "async_routes": {
+        "/api/async/seq": {
+          "valid_samples": 5,
+          "invalid_samples": 0,
+          "median_ms": 3234.248
+        },
+        "/api/async/parallel": {
+          "valid_samples": 5,
+          "invalid_samples": 0,
+          "median_ms": 1208.937
+        }
+      },
+      "median_speedup": 2.6752825002460843,
+      "api_checks": 57,
+      "ui_dom_checks": 25,
+      "state_before": {
+        "memory_value": 3,
+        "durable_value": 3,
+        "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+        "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+        "counter_name": "seminar-demo-2"
+      },
+      "state_after": {
+        "memory_value": 0,
+        "durable_value": 3,
+        "instance_id": "a9956fb0-3a3a-415c-87f8-7c84844747a1",
+        "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+        "counter_name": "seminar-demo-2"
+      }
+    }
+  },
+  "source_sha256": {
+    "src/async-waits.js": "1c8760bd7d6fa1db145a2de0fe221620638b187f59f559c5b0947fbe5eea12f0",
+    "src/auth.js": "c7acea37c71fc957149204734672c5b0ca671220526c3d7d529e458ef6350a87",
+    "src/durable-counter.js": "7912ef756f3c1350f3585f7a911cecdfc37928bbecde545c0e2f63300a197dd2",
+    "src/worker.js": "c30a8e5eac79f9b042b9570616c1e16e98fe877425ae32149adb3c058154e213",
+    "public/app.js": "1c7875942253298e4a29334e70fdbd84e15a7127520c040e4573fc8c48c94096",
+    "public/demo-client.js": "3a8a1c5f5616e900cb5a243ad8a3e3a733ea29195765a253afee82e22538da44",
+    "public/index.html": "e430f2eb950a82ff51f0d264efa05524f0197f78158e48ececddf7045112ca3a",
+    "public/style.css": "83993451607afe62373f351c561edce90368dc36236b5733daa66102382363df",
+    "public/_headers": "97d9ca0eb6bb9dca21a0fc3b28c433215d2e3ce361ec43da0167001a7d97a4f7"
+  },
+  "secret_scan_leaked_paths": [],
+  "blocked": [
+    "Real browser visual/CSP and second-browser checks: Browser runtime reports no connected browser.",
+    "Merge/render the original Beamer deck: no source deck and no TeX compiler supplied; two matching frames are provided."
+  ],
+  "public_access_enabled": false,
+  "public_access_disabled_at": "2026-11-27T07:55:45.824009+00:00",
+  "lifecycle_record": "results/cloud/unpublished.json",
+  "prior_cloud_checks_are_historical": true
+}

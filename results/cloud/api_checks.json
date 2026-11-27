@@ -1,0 +1,377 @@
+{
+  "base_url": "https://neon-workers-seminar.neon-workers-seminar.workers.dev",
+  "recorded_at": "2026-11-27T06:46:07.751903+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "public health",
+      "passed": true
+    },
+    {
+      "name": "health no-store",
+      "passed": true
+    },
+    {
+      "name": "static /",
+      "passed": true
+    },
+    {
+      "name": "static CSP /",
+      "passed": true
+    },
+    {
+      "name": "static /app.js",
+      "passed": true
+    },
+    {
+      "name": "static CSP /app.js",
+      "passed": true
+    },
+    {
+      "name": "static /demo-client.js",
+      "passed": true
+    },
+    {
+      "name": "static CSP /demo-client.js",
+      "passed": true
+    },
+    {
+      "name": "static /style.css",
+      "passed": true
+    },
+    {
+      "name": "static CSP /style.css",
+      "passed": true
+    },
+    {
+      "name": "missing token GET /api/async/seq",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store missing /api/async/seq",
+      "passed": true
+    },
+    {
+      "name": "wrong token GET /api/async/seq",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store wrong /api/async/seq",
+      "passed": true
+    },
+    {
+      "name": "missing token GET /api/async/parallel",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store missing /api/async/parallel",
+      "passed": true
+    },
+    {
+      "name": "wrong token GET /api/async/parallel",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store wrong /api/async/parallel",
+      "passed": true
+    },
+    {
+      "name": "missing token GET /api/state",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store missing /api/state",
+      "passed": true
+    },
+    {
+      "name": "wrong token GET /api/state",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store wrong /api/state",
+      "passed": true
+    },
+    {
+      "name": "missing token POST /api/state/increment",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store missing /api/state/increment",
+      "passed": true
+    },
+    {
+      "name": "wrong token POST /api/state/increment",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store wrong /api/state/increment",
+      "passed": true
+    },
+    {
+      "name": "missing token POST /api/state/reset",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store missing /api/state/reset",
+      "passed": true
+    },
+    {
+      "name": "wrong token POST /api/state/reset",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store wrong /api/state/reset",
+      "passed": true
+    },
+    {
+      "name": "missing token POST /api/state/restart",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store missing /api/state/restart",
+      "passed": true
+    },
+    {
+      "name": "wrong token POST /api/state/restart",
+      "passed": true
+    },
+    {
+      "name": "unauth no-store wrong /api/state/restart",
+      "passed": true
+    },
+    {
+      "name": "method guard /api/async/seq",
+      "passed": true
+    },
+    {
+      "name": "method guard /api/async/parallel",
+      "passed": true
+    },
+    {
+      "name": "method guard /api/state",
+      "passed": true
+    },
+    {
+      "name": "method guard /api/state/increment",
+      "passed": true
+    },
+    {
+      "name": "method guard /api/state/reset",
+      "passed": true
+    },
+    {
+      "name": "method guard /api/state/restart",
+      "passed": true
+    },
+    {
+      "name": "unknown /api/unknown",
+      "passed": true
+    },
+    {
+      "name": "unknown /api/state/unknown",
+      "passed": true
+    },
+    {
+      "name": "unknown /buffer",
+      "passed": true
+    },
+    {
+      "name": "unknown /stream",
+      "passed": true
+    },
+    {
+      "name": "GET invariance 1",
+      "passed": true
+    },
+    {
+      "name": "GET invariance 2",
+      "passed": true
+    },
+    {
+      "name": "GET invariance 3",
+      "passed": true
+    },
+    {
+      "name": "body /api/async/seq",
+      "passed": true
+    },
+    {
+      "name": "headers /api/async/seq",
+      "passed": true
+    },
+    {
+      "name": "body /api/async/parallel",
+      "passed": true
+    },
+    {
+      "name": "headers /api/async/parallel",
+      "passed": true
+    },
+    {
+      "name": "reset 0/0",
+      "passed": true
+    },
+    {
+      "name": "atomic unique durable increments",
+      "passed": true
+    },
+    {
+      "name": "RAM and SQL same snapshot",
+      "passed": true
+    },
+    {
+      "name": "concurrent same instance",
+      "passed": true
+    },
+    {
+      "name": "concurrent same object",
+      "passed": true
+    },
+    {
+      "name": "concurrent final 20/20",
+      "passed": true
+    }
+  ],
+  "concurrent_increments": [
+    {
+      "memory_value": 1,
+      "durable_value": 1,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 5,
+      "durable_value": 5,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 2,
+      "durable_value": 2,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 4,
+      "durable_value": 4,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 3,
+      "durable_value": 3,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 6,
+      "durable_value": 6,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 7,
+      "durable_value": 7,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 8,
+      "durable_value": 8,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 10,
+      "durable_value": 10,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 9,
+      "durable_value": 9,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 11,
+      "durable_value": 11,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 12,
+      "durable_value": 12,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 14,
+      "durable_value": 14,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 13,
+      "durable_value": 13,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 15,
+      "durable_value": 15,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 16,
+      "durable_value": 16,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 17,
+      "durable_value": 17,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 20,
+      "durable_value": 20,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 18,
+      "durable_value": 18,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    },
+    {
+      "memory_value": 19,
+      "durable_value": 19,
+      "instance_id": "dbc20523-0ba0-4da8-9c19-dfb5131e1132",
+      "object_id": "7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91",
+      "counter_name": "seminar-demo-2"
+    }
+  ]
+}

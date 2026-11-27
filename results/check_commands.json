@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-11-27T06:50:26.162617+00:00",
+  "npm_test": {
+    "exit_code": 0,
+    "node_pass": 9,
+    "python_pass": 8,
+    "log": "results/unit_tests.txt"
+  },
+  "npm_run_check": {
+    "exit_code": 0,
+    "log": "results/dry_run.txt"
+  }
+}

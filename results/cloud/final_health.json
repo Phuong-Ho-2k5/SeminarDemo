@@ -1,0 +1,8 @@
+{
+  "base_url": "https://neon-workers-seminar.neon-workers-seminar.workers.dev",
+  "recorded_at": "2026-11-27T06:50:03.340591+00:00",
+  "status": 200,
+  "body": "{\"application\":\"neon-workers-seminar\",\"status\":\"ok\"}",
+  "cache_control": "no-store",
+  "passed": true
+}

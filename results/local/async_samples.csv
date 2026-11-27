@@ -1,0 +1,11 @@
+trial,route,status,total_ms,body_ok,error
+1,/api/async/seq,200,3021.577,True,
+1,/api/async/parallel,200,1020.118,True,
+2,/api/async/parallel,200,1017.61,True,
+2,/api/async/seq,200,3027.237,True,
+3,/api/async/seq,200,3036.685,True,
+3,/api/async/parallel,200,1020.003,True,
+4,/api/async/parallel,200,1025.434,True,
+4,/api/async/seq,200,3017.727,True,
+5,/api/async/seq,200,3038.183,True,
+5,/api/async/parallel,200,1029.402,True,

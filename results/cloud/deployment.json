@@ -1,0 +1,19 @@
+{
+  "base_url": "https://neon-workers-seminar.neon-workers-seminar.workers.dev",
+  "worker_name": "neon-workers-seminar",
+  "initial_deployment_id": "b890d4cc-3c4d-44e9-bc4f-863742f0c494",
+  "initial_version_id": "30fc5e9d-be5e-495d-90c9-75d59c1c4b17",
+  "initial_created_on": "2026-11-27T06:35:09.693901Z",
+  "secret_deployment_id": "b52dbbb2-33d2-4850-b982-f47ac2be9c46",
+  "active_version_id": "6d1358e9-5466-47f4-9cba-db76214f908e",
+  "secret_created_on": "2026-11-27T06:35:55.170443Z",
+  "secret_names": [
+    "DEMO_TOKEN"
+  ],
+  "source": "npm run deploy; wrangler deployments list --json; wrangler secret list",
+  "paid_services_enabled": false,
+  "public_access_enabled": false,
+  "public_access_disabled_at": "2026-11-27T07:55:45.824009+00:00",
+  "lifecycle_record": "results/cloud/unpublished.json",
+  "prior_cloud_checks_are_historical": true
+}

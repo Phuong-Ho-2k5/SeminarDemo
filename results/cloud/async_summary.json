@@ -1,0 +1,40 @@
+{
+  "recorded_at": "2026-11-27T06:43:06.825309+00:00",
+  "base_url": "https://neon-workers-seminar.neon-workers-seminar.workers.dev",
+  "python": "3.10.11",
+  "clock": "time.perf_counter; includes full response.read()",
+  "trials_per_route": 5,
+  "warmups": [
+    {
+      "trial": 0,
+      "route": "/api/async/seq",
+      "status": 200,
+      "total_ms": 3337.488,
+      "body_ok": true,
+      "error": ""
+    },
+    {
+      "trial": 0,
+      "route": "/api/async/parallel",
+      "status": 200,
+      "total_ms": 1256.117,
+      "body_ok": true,
+      "error": ""
+    }
+  ],
+  "passed": true,
+  "routes": {
+    "/api/async/seq": {
+      "valid_samples": 5,
+      "invalid_samples": 0,
+      "median_ms": 3234.248
+    },
+    "/api/async/parallel": {
+      "valid_samples": 5,
+      "invalid_samples": 0,
+      "median_ms": 1208.937
+    }
+  },
+  "median_speedup": 2.6752825002460843,
+  "parallel_faster_observed": true
+}

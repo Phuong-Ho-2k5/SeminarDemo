@@ -1,0 +1,11 @@
+{
+  "started_at": "2026-11-27T11:12:34.112701+00:00",
+  "demo": "async",
+  "passed": true,
+  "base_url": "http://127.0.0.1:8787",
+  "owned_worker": true,
+  "worker_pid": 38724,
+  "owned_worker_stopped": true,
+  "finished_at": "2026-11-27T11:13:03.435347+00:00",
+  "exit_code": 0
+}

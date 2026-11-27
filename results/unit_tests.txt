@@ -1,0 +1,26 @@
+
+> neon-workers-seminar@1.0.0 test
+> node --test tests/*.test.js && python -m unittest discover -s tests -p test_*.py
+
+✔ three independent waits of 1000 ms (0.825ms)
+✔ sequential starts each wait after the previous resolves (0.245ms)
+✔ parallel creates every promise before awaiting and waits for all (0.3336ms)
+✔ missing server secret fails closed (28.221ms)
+✔ missing, wrong, malformed tokens are denied; only exact Bearer passes (5.1028ms)
+✔ client waits for the full body before resolving or reporting time (1.8888ms)
+✔ a failed POST is sent once (1.2848ms)
+✔ restart polling is bounded and unchanged instance never passes (0.9001ms)
+✔ browser benchmark warms up and alternates five pairs (1.1288ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 150.5469
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.558s
+
+OK

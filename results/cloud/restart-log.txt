@@ -1,0 +1,12 @@
+Excerpt transcribed from `npx wrangler tail --format pretty`, 2026-11-27.
+Terminal timestamp: 11/27/2026, 1:39:12 PM (Asia/Saigon).
+Only route/application messages are retained; no request headers.
+
+PersistentCounter.restartForDemo - Unknown
+  (warn) {"event":"SEMINAR_RESTART","object_id":"7276bba874ae418beb1e6415bdec992742a9e8d3a1ac4f2e961264df9b7bfe91","instance_id":"643504df-961d-4335-bb8c-0b7e9efad417"}
+Error: SEMINAR_RESTART
+POST https://neon-workers-seminar.neon-workers-seminar.workers.dev/api/state/restart - Ok
+  (log) {"route":"/api/state/restart","request_id":"4c1c3997-8f8c-41fe-b40d-b09aa53b5d111"}
+
+The HTTP restart call is expected to terminate. The actual proof of restart
+is the changed instance_id and stable object_id in state_run.json.

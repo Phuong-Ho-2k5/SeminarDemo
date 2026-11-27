@@ -1,0 +1,40 @@
+{
+  "recorded_at": "2026-11-27T11:13:03.254001+00:00",
+  "base_url": "http://127.0.0.1:8787",
+  "python": "3.10.11",
+  "clock": "time.perf_counter; includes full response.read()",
+  "trials_per_route": 5,
+  "warmups": [
+    {
+      "trial": 0,
+      "route": "/api/async/seq",
+      "status": 200,
+      "total_ms": 3026.749,
+      "body_ok": true,
+      "error": ""
+    },
+    {
+      "trial": 0,
+      "route": "/api/async/parallel",
+      "status": 200,
+      "total_ms": 1023.403,
+      "body_ok": true,
+      "error": ""
+    }
+  ],
+  "passed": true,
+  "routes": {
+    "/api/async/seq": {
+      "valid_samples": 5,
+      "invalid_samples": 0,
+      "median_ms": 3033.715
+    },
+    "/api/async/parallel": {
+      "valid_samples": 5,
+      "invalid_samples": 0,
+      "median_ms": 1032.236
+    }
+  },
+  "median_speedup": 2.938974226824098,
+  "parallel_faster_observed": true
+}
